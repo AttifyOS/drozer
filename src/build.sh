@@ -10,7 +10,7 @@ eval "$(./bin/micromamba shell hook --shell=bash)"
 
 micromamba create -n drozer -c conda-forge python=2 openjdk=7.0.161 conda-pack --yes
 micromamba activate drozer
-
+pip install twisted protobuf pyopenssl service_identity
 git clone https://github.com/WithSecureLabs/drozer
 cd drozer
 git checkout develop
