@@ -33,7 +33,7 @@ install() {
   rm $APM_TMP_DIR/drozer-a80c5f1.tar.gz
 
   echo '#!/usr/bin/env sh' > $APM_PKG_BIN_DIR/drozer
-  echo "PATH=$APM_PKG_INSTALL_DIR/bin:\$PATH $APM_PKG_INSTALL_DIR/bin/drozer" >> $APM_PKG_BIN_DIR/drozer
+  echo "PATH=$APM_PKG_INSTALL_DIR/bin:\$PATH $APM_PKG_INSTALL_DIR/bin/drozer \"\$@\"" >> $APM_PKG_BIN_DIR/drozer
   chmod +x $APM_PKG_BIN_DIR/drozer
 
   echo "This package adds the command: drozer"
